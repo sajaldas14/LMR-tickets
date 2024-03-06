@@ -1,0 +1,11 @@
+.pass_show {
+    float: right;
+    top: -34px;
+    position: relative;
+    right: 10px;
+    border:0;
+    background: transparent;
+}
+.pass_show img { width:18px; float:right; }
+ul.pagination li a { margin:0 5px; }
+ul.pagination li a:hover { cursor: pointer; }

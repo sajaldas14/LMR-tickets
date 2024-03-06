@@ -1,0 +1,1849 @@
+@media only screen and (max-width: 1919px){
+    
+/**dashboard page css starts**/
+    
+.dashboard_sec .left_sec .heading h2 {
+    font-size: 25px;
+}
+.dashboard_sec .left_sec {
+    padding-right: 25px;
+}    
+.dashboard_sec .right_sec .box h3 {
+    font-size: 36px;
+}    
+.dashboard_sec .left_sec .table tbody th, .dashboard_sec .left_sec .table td {
+    font-size: 11px;
+}    
+.dashboard_sec .left_sec .table tbody td h6 img.profile_pic {
+    width: 23px;
+    margin-right: 9px;
+}
+.dashboard_sec .left_sec .table tr td img.icon {
+    max-width: 80px;
+}
+.dashboard_sec {
+    padding-bottom: 150px;
+}
+.dashboard_sec .left_sec .table tbody td h6 {
+    font-size: 11px;
+}
+.dashboard_sec .right_sec .box h6 {
+    font-size: 15px;
+}
+.dashboard_sec .right_sec .box .txt img.icon {
+    width: 35px;
+    margin-right: 10px;
+}
+.dashboard_sec .left_sec .search input#Keywords {
+    width: 450px;
+    padding-left: 50px;
+}
+.dashboard_sec .left_sec .search {
+    width: 450px;
+}
+.TopHeaderProfile .Profile-pic {
+    margin-right: 12px;
+}    
+    
+
+/**ticket_details css starts**/
+.ticket_details_sec .left_sec .chat_box {
+    padding-right: 48px;
+}    
+.ticket_details_sec .left_sec .chatbox_container {
+    padding: 40px 25px 40px 25px;
+}    
+.ticket_details_sec .left_sec .heading {
+    padding-bottom: 25px;
+}
+.ticket_details_sec .right_sec {
+    padding-left: 12px;
+    margin-top: 69px;
+}
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords {
+    width: 650px;
+}    
+.ticket_details_sec .about_ticketbox .box .heading h5 {
+    font-size: 13px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 {
+    font-size: 13px;
+}
+.ticket_details_sec .about_ticketbox .box .details {
+    width: 58%;
+    max-width: 58%;
+    flex: 0 0 58%;
+}
+.ticket_details_sec .about_ticketbox .box .heading {
+    width: 40%;
+    max-width: 40%;
+    flex: 0 0 40%;
+}    
+.ticket_details_sec .about_ticketbox .button a {
+    height: 52px;
+    border-radius: 15px;
+}    
+.ticket_details_sec .right_sec .about_ticketbox {
+    padding: 40px 22px 50px 22px;
+}
+.ticket_details_sec .about_ticketbox .box {
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 52px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.ticket_details_sec .left_sec .heading h2 {
+    font-size: 27px;
+}
+
+    
+    
+/**admin_dashboard page**/
+    
+.admin_dashboard_sec .left_sec .top_sec .heading h2 {
+    font-size: 26px;
+    letter-spacing: 0.02rem;
+}
+.admin_dashboard_sec .left_sec .top_sec {
+    margin-bottom: 25px;
+}
+.admin_dashboard_sec {
+    padding-top: 55px;
+    padding-bottom: 150px;
+}
+.admin_dashboard_sec .right_sec {
+    margin-top: 65px;
+}
+.admin_dashboard_sec .left_sec {
+    padding-right: 20px;
+}
+.admin_dashboard_sec .left_sec .box .heading h4 {
+    font-size: 14px;
+}
+.admin_dashboard_sec .left_sec .col-lg-6.left {
+    padding-right: 12px;
+}
+.admin_dashboard_sec .left_sec .col-lg-6.right {
+    padding-left: 12px;
+}
+.admin_dashboard_sec .right_sec .box h3 {
+    font-size: 36px;
+}
+.admin_dashboard_sec .right_sec .box .txt img.icon {
+    width: 35px;
+    margin-right: 10px;
+}
+.admin_dashboard_sec .right_sec .box h6 {
+    font-size: 15px;
+}
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 1599px){
+    
+/**dashboard page css starts**/
+.dashboard_sec .left_sec .table tbody th, .dashboard_sec .left_sec .table td {
+    font-size: 10px;
+}     
+.dashboard_sec {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.dashboard_sec .right_sec .main_box {
+    padding: 35px 15px 30px 15px;
+}
+.dashboard_sec .left_sec {
+    width: 80%;
+    max-width: 80%;
+    flex: 0 0 80%;
+    padding-right: 12px;
+}
+.dashboard_sec .right_sec {
+    width: 20%;
+    max-width: 20%;
+    flex: 0 0 20%;
+    padding-left: 15px;
+    margin-top: 78px;
+}    
+.dashboard_sec .left_sec .top_sec {
+    margin-bottom: 20px;
+}
+.dashboard_sec .right_sec .box h6 {
+    font-size: 14px;
+}
+.dashboard_sec .right_sec .box .txt img.icon {
+    width: 30px;
+    margin-right: 8px;
+}
+.dashboard_sec .right_sec .box {
+    margin-bottom: 30px;
+}
+.dashboard_sec .right_sec .box h3 {
+    font-size: 28px;
+}
+.dashboard_sec .left_sec .heading h2 {
+    font-size: 22px;
+}
+.dashboard_sec .left_sec .pagination_sec {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.dashboard_sec .left_sec .table tbody th, .dashboard_sec .left_sec .table td {
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+}
+
+
+
+/**admin_dashboard page**/
+ .admin_dashboard_sec .right_sec .box .txt img.icon {
+    width: 30px;
+    margin-right: 8px;
+}   
+.admin_dashboard_sec .right_sec .box h6 {
+    font-size: 14px;
+}
+.admin_dashboard_sec .right_sec .box h3 {
+    font-size: 33px;
+}
+.admin_dashboard_sec .left_sec .top_sec {
+    margin-bottom: 22px;
+}
+.admin_dashboard_sec .left_sec .box .name input[type="checkbox"] {
+    margin-right: 12px;
+}
+.admin_dashboard_sec .right_sec {
+    margin-top: 62px;
+}
+.admin_dashboard_sec .left_sec .top_sec .heading h2 {
+    font-size: 24px;
+    letter-spacing: 0.02rem;
+}
+.admin_dashboard_sec .left_sec .box .heading {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.admin_dashboard_sec .right_sec {
+    width: 23%;
+    max-width: 23%;
+    flex: 0 0 23%;
+}
+.admin_dashboard_sec .left_sec {
+    width: 77%;
+    max-width: 77%;
+    flex: 0 0 77%;
+}
+
+
+
+
+
+
+    
+    
+    
+    
+    
+/**ticket_details css starts**/
+.ticket_details_sec .left_sec .message-box .message p {
+    font-size: 11px;
+}    
+.ticket_details_sec .left_sec .message-box.friend-message .message {
+    padding: 8px 20px 8px 12px;
+}
+.ticket_details_sec .left_sec .message-box.my-message .message {
+    padding: 8px 12px 8px 20px;
+}
+.ticket_details_sec .left_sec .message-box .message .pdf_upload a {
+    font-size: 11px;
+    padding-left: 20px;
+}
+.ticket_details_sec .left_sec .message-box .message .pdf_upload a::before {
+    background-size: 12px;
+    width: 12px;
+    left: 2px;
+    top: 3px;
+}
+.ticket_details_sec {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.ticket_details_sec .right_sec {
+    margin-top: 65px;
+}
+.ticket_details_sec .left_sec .message-box .message .pdf_upload {
+    padding-top: 14px;
+    padding-bottom: 10px;
+}
+.ticket_details_sec .right_sec .about_ticketbox {
+    padding: 35px 20px 45px 20px;
+}
+.ticket_details_sec .about_ticketbox .box .details {
+    width: 54%;
+    max-width: 54%;
+    flex: 0 0 54%;
+}
+.ticket_details_sec .about_ticketbox .box .heading {
+    width: 44%;
+    max-width: 44%;
+    flex: 0 0 44%;
+}    
+.ticket_details_sec .left_sec .bottom_sec {
+    padding-top: 14px;
+}    
+.ticket_details_sec .left_sec .bottom_sec .file-loading {
+    margin-right: 20px;
+}    
+    
+  
+    
+/**ticket_details_media css starts**/ 
+.ticket_details_sec.media .right_sec .all_mediabox .heading h3 {
+    font-size: 15px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox .heading {
+    height: 60px;
+    padding-left: 25px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox {
+    padding: 90px 25px 50px 25px;
+}
+    
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 1439px){
+    
+.dashboard_sec .left_sec {
+    width: 95%;
+    max-width: 95%;
+    flex: 0 0 95%;
+    padding-right: 12px;
+}    
+/**ticket_details css starts**/
+.ticket_details_sec .left_sec .chatbox_container {
+    padding: 40px 20px 40px 20px;
+}
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords {
+    width: 600px;
+}
+.ticket_details_sec .about_ticketbox .box .heading h5 {
+    font-size: 12px;
+}    
+.ticket_details_sec .about_ticketbox .box .details h6 {
+    font-size: 12px;
+}    
+.ticket_details_sec .about_ticketbox .button a {
+    height: 50px;
+    font-size: 13px;
+}
+.ticket_details_sec .about_ticketbox .box {
+    height: 50px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 img.profile_pic {
+    width: 28px;
+}
+.left-sidebar {
+    width: 70px;
+}
+.left-sidebar .left-sidebar-header img {
+    width: 38px;
+}    
+.left-sidebar .left-sidebar-header {
+    width: 70px;
+}
+.ticket_details_sec {
+    margin-left: 70px;
+}
+.TopHeaderRow .col.me-auto {
+    padding-left: 5px;
+}    
+.ticket_details_sec .about_ticketbox .button a img {
+    width: 22px;
+}
+.TopHeaderProfile .Profile-pic {
+    margin-right: 12px;
+}
+.TopHeader {
+    padding-inline-start: 70px;
+}
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords::placeholder{
+    font-size: 13px;
+}
+.ticket_details_sec .left_sec .bottom_sec .type_message .form-control{
+    font-size: 13px;
+}    
+.footer_logosec {
+    margin-left: 70px;
+}
+.copyright_sec {
+    margin-left: 70px;
+}
+
+
+    
+    
+/**dashboard page css starts**/
+    
+.dashboard_sec .left_sec .search input#Keywords::placeholder{
+    font-size: 11px;
+}  
+.dashboard_sec .left_sec .search input#Keywords {
+    width: 400px;
+    height: 45px;
+}
+.dashboard_sec .left_sec .search {
+    width: 400px;
+    height: 45px;
+}
+.dashboard_sec .right_sec .box h3 {
+    font-size: 30px;
+}
+.dashboard_sec .right_sec {
+    margin-top: 74px;
+    position: fixed;
+    right: -205px;
+    transition: .25s;
+}
+    
+.dashboard_sec .right_sec:hover{
+    right: -20px;    
+}
+.dashboard_sec {
+    margin-left: 70px;
+}
+
+
+
+/**admin_dashboard page**/
+
+.admin_dashboard_sec {
+    margin-left: 70px;
+    padding-left: 25px;
+    padding-right: 25px;
+}    
+.admin_dashboard_sec .left_sec .box .email {
+    font-size: 12px;
+}
+.admin_dashboard_sec .right_sec {
+    margin-top: 61px;
+}
+.admin_dashboard_sec .right_sec .box h3 {
+    font-size: 30px;
+}
+.dashboard_sec .right_sec {
+    width: 21.5%;
+    max-width: 21.5%;
+    flex: 0 0 21.5%;
+}
+.dashboard_sec .right_sec .main_box {
+    padding: 35px 15px 30px 35px;
+    position: relative;
+}
+.dashboard_sec .right_sec .main_box::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/arrow-prev.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    height: 14px;
+    width: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+}
+
+
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 1365px){
+    
+/**login_page css starts**/
+.login_page_sec img.main_logo {
+    top: 55px;
+    width: 300px;
+}
+.login_page_sec .login_form .heading h3 {
+    font-size: 32px;
+    line-height: 42px;
+}
+.login_page_sec .login_form {
+    width: 520px;
+}
+.login_page_sec .login_form .form_sec {
+    padding: 50px 35px;
+}
+.dashboard_sec .right_sec {
+    right: -220px;
+}
+
+
+
+/**ticket_details css starts**/
+.TopHeaderRow .col.me-auto {
+    padding-left: 0px;
+}
+.TopHeaderRow .col:first-child{
+    padding-right: 8px;    
+}
+.ticket_details_sec {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 40px;
+}
+.ticket_details_sec .left_sec .heading {
+    padding-bottom: 20px;
+}    
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords {
+    width: 500px;
+}    
+.ticket_details_sec .left_sec .chat_box .message-box.friend-message {
+    max-width: 77%;
+}
+.ticket_details_sec .left_sec .chat_box .message-box.my-message {
+    max-width: 77%;
+}    
+.ticket_details_sec .right_sec {
+    width: 35%;
+    max-width: 35%;
+    flex: 0 0 35%;
+    margin-top: 60px;
+}    
+.ticket_details_sec .about_ticketbox .box {
+    height: 48px;
+    margin-top: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+}    
+.ticket_details_sec .right_sec .about_ticketbox {
+    padding: 35px 16px 45px 16px;
+    border-radius: 25px;
+}
+.ticket_details_sec .left_sec .chatbox_container {
+    border-radius: 25px;
+}
+.ticket_details_sec .about_ticketbox .button a {
+    border-radius: 12px;
+}
+
+    
+/**ticket_details_media css starts**/  
+.ticket_details_sec.media .right_sec .all_mediabox .heading {
+    height: 55px;
+    padding-left: 22px;
+    border-radius: 25px 25px 0px 0px;
+}    
+.ticket_details_sec.media .right_sec .all_mediabox {
+    padding: 80px 20px 40px 22px;
+    border-radius: 25px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox button.btn.btn-close-icon {
+    right: 10px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox ul li {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+
+/**dashboard page css starts**/
+    
+.dashboard_sec {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 120px;
+}
+
+.dashboard_sec .right_sec {
+    width: 25%;
+    max-width: 25%;
+    flex: 0 0 25%;
+    margin-top: 75px;
+}
+
+
+    
+    
+    
+    
+    
+/**admin_dashboard page**/  
+.admin_dashboard_sec .left_sec {
+    width: 70%;
+    max-width: 70%;
+    flex: 0 0 70%;
+}
+.admin_dashboard_sec .left_sec .col-lg-6{
+    width: 100%;
+    max-width: 100%;
+}
+.admin_dashboard_sec .right_sec {
+    width: 30%;
+    max-width: 30%;
+    flex: 0 0 30%;
+}
+.admin_dashboard_sec .left_sec .col-lg-6.left {
+    margin-bottom: 40px;
+}
+.admin_dashboard_sec {
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+    
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 1199px){
+.dashboard_sec .left_sec .table tbody th, .dashboard_sec .left_sec .table td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 9px;
+}
+.dashboard_sec .left_sec .table thead th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 10px;
+}
+.dashboard_sec .left_sec .table tbody td button {
+    font-size: 10px;
+}
+.dashboard_sec .left_sec .table tbody td h6 {
+    font-size: 10px;
+}
+
+
+
+
+
+/**login_page css starts**/
+.login_page_sec img.main_logo {
+    top: 35px;
+    width: 250px;
+}
+.login_page_sec .login_form {
+    width: 500px;
+    margin-top: 55px;
+}
+.login_page_sec .login_form .heading h3 {
+    font-size: 28px;
+    line-height: 35px;
+}
+.login_page_sec .login_form .heading h6 {
+    font-size: 13px;
+    letter-spacing: 0px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login_page_sec .login_form .form_sec {
+    padding: 50px 25px;
+}
+.dashboard_sec .right_sec {
+    right: -210px;
+}
+
+
+
+/**ticket_details css starts**/
+.ticket_details_sec {
+    padding-left: 10px;
+    padding-right: 10px;
+}    
+.ticket_details_sec .left_sec .heading h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}    
+.ticket_details_sec .right_sec {
+    margin-top: 54px;
+}    
+.ticket_details_sec .left_sec .chatbox_container {
+    padding: 35px 15px 35px 15px;
+}    
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords {
+    width: 400px;
+}
+.ticket_details_sec .about_ticketbox .button a img {
+    width: 18px;
+    margin-right: 10px;
+}    
+.ticket_details_sec .about_ticketbox .button a {
+    height: 45px;
+    font-size: 12px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 img.profile_pic {
+    width: 24px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 span {
+    font-size: 11px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 {
+    font-size: 11px;
+}
+.ticket_details_sec .about_ticketbox .box .heading h5 {
+    font-size: 11px;
+}
+.ticket_details_sec .about_ticketbox .box .details {
+    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.ticket_details_sec .about_ticketbox .box .heading {
+    width: 46%;
+    max-width: 46%;
+    flex: 0 0 46%;
+}
+.ticket_details_sec .about_ticketbox .box {
+    height: 45px;
+    margin-top: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.ticket_details_sec .left_sec .message-box .message p {
+    font-size: 10px;
+}
+.ticket_details_sec .left_sec .chat_box .message-box {
+    margin-bottom: 25px;
+}
+.ticket_details_sec .right_sec .about_ticketbox {
+    padding: 35px 12px 45px 12px;
+}
+.ticket_details_sec .left_sec .message-box .message .pdf_upload a::before {
+    background-size: 11px;
+    width: 11px;
+    left: 0px;
+    top: 2px;
+}
+.ticket_details_sec .left_sec .message-box .message .pdf_upload a {
+    font-size: 10px;
+    padding-left: 15px;
+}
+.ticket_details_sec .left_sec .bottom_sec {
+    padding-top: 12px;
+    margin-top: 12px;
+    padding-right: 12px;
+}
+.left-sidebar-menu {
+    padding-top: 115px;
+}
+.left-sidebar {
+    width: 60px;
+}
+.left-sidebar .left-sidebar-header img {
+    width: 35px;
+}
+.left-sidebar .left-sidebar-header {
+    width: 60px;
+}
+.TopHeader {
+    padding-inline-start: 60px;
+}
+.ticket_details_sec {
+    margin-left: 60px;
+}
+.footer_logosec .footer_logo {
+    width: 245px;
+}
+.footer_logosec {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+span.mobile-d-none {
+    width: 45px;
+}
+.footer_logosec {
+    margin-left: 60px;
+}
+.copyright_sec {
+    margin-left: 60px;
+}
+
+
+
+/**ticket_details_media css starts**/
+.ticket_details_sec.media .right_sec .all_mediabox ul li {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}    
+.ticket_details_sec.media .right_sec .all_mediabox ul li a {
+    font-size: 12px;
+    padding-left: 20px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox ul li a::before {
+    background-size: 12px;
+    width: 12px;
+    height: 13px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox .heading h3 {
+    font-size: 14px;
+}
+
+    
+    
+/**dashboard page css starts**/
+    
+.dashboard_sec .left_sec .search input#Keywords {
+    width: 290px;
+    height: 42px;
+    padding-left: 40px;
+}
+.dashboard_sec .left_sec .search::before {
+    background-size: 14px;
+    width: 15px;
+    height: 22px;
+    top: 10px;
+    left: 15px;
+}    
+.dashboard_sec .left_sec .search {
+    width: 290px;
+    height: 42px;
+}
+.dashboard_sec .left_sec .heading h2 {
+    font-size: 20px;
+    max-width: 95%;
+}
+.dashboard_sec .left_sec .top_sec {
+    margin-bottom: 12px;
+}
+.dashboard_sec {
+    margin-left: 60px;
+}
+.dashboard_sec {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 100px;
+}
+.dashboard_sec {
+    padding-top: 50px;
+}
+
+.dashboard_sec .right_sec {
+    width: 27%;
+    max-width: 27%;
+    flex: 0 0 27%;
+    margin-top: 70px;
+}
+.dashboard_sec .right_sec .box h3 {
+    font-size: 26px;
+}
+
+
+
+/**admin_dashboard page**/ 
+
+.admin_dashboard_sec {
+    margin-left: 60px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 50px;
+}
+.admin_dashboard_sec .left_sec .top_sec .heading h2 {
+    font-size: 22px;
+    line-height: 28px;
+}
+.admin_dashboard_sec .left_sec .box .heading h4 {
+    font-size: 13px;
+}
+.admin_dashboard_sec .left_sec {
+    width: 68%;
+    max-width: 68%;
+    flex: 0 0 68%;
+}
+.admin_dashboard_sec .right_sec {
+    width: 32%;
+    max-width: 32%;
+    flex: 0 0 32%;
+}
+.admin_dashboard_sec .right_sec {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 1023px){
+
+/**login_page css starts**/
+.login_page_sec .login_form {
+    margin-top: 0px;
+}    
+.login_page_sec img.main_logo {
+    top: 50px;
+}
+.dashboard_sec .right_sec .main_box {
+    padding: 35px 15px 30px 15px;
+}
+.dashboard_sec .right_sec .main_box::before{
+    display: none;
+}
+
+    
+/**ticket_details css starts**/   
+.Profile-cont h5 {
+    font-size: 13px;
+    margin-bottom: 2px;
+}    
+.TopHeader {
+    height: 52px;
+}
+.left-sidebar .left-sidebar-header {
+    height: 52px;
+}    
+.left-sidebar-menu ul li img {
+    max-width: 15px;
+    max-height: 17px;
+}
+.TopHeader .btn-close-icon {
+    margin-top: 11px;
+}
+.TopHeader .btn-search {
+    margin-top: 11px;
+}
+.TopHeader .btn-search img {
+    width: 15px;
+}
+.TopHeaderRow .col {
+    padding-left: 8px;
+    padding-right: 8px;
+}    
+.TopHeader .btn-phone {
+    margin-top: 11px;
+}
+.TopHeader .btn-phone img {
+    width: 15px;
+}
+.TopHeader .btn-darkmode {
+    margin-top: 11px;
+}
+.TopHeader .btn-darkmode img{
+    width: 15px;
+}    
+.TopHeader .btn-notification {
+    margin-top: 11px;
+}
+.TopHeader .btn-notification img{
+    width: 15px;    
+}
+.TopHeader .btn-notification span {
+    top: 0px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+    line-height: 13px;
+}
+.TopHeader .btn-fullscreen {
+    margin-top: 11px;
+}
+.TopHeader .btn-fullscreen img{
+    width: 15px;    
+}
+.TopHeaderProfile .Profile-pic {
+    margin-right: 11px;
+    width: 32px;
+    height: 32px;
+}
+.TopHeaderProfile {
+    padding-top: 10px;
+}
+.ticket_details_sec .row {
+    flex-wrap: wrap;
+}
+.ticket_details_sec .left_sec {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-right: 12px;
+}    
+.ticket_details_sec .right_sec {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-top: 50px;
+}    
+.ticket_details_sec .right_sec .about_ticketbox {
+    padding: 35px 15px 45px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ticket_details_sec .about_ticketbox .button{
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+.ticket_details_sec .about_ticketbox .button a {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+.ticket_details_sec .about_ticketbox .box {
+    width: 48.7%;
+    max-width: 48.7%;
+    flex: 0 0 48.7%;
+}    
+.ticket_details_sec {
+    padding-top: 45px;
+}    
+.copyright_sec span.mobile-d-block {
+    display: block;
+}
+.copyright_sec p img.logo {
+    width: 80px;
+}    
+    
+ 
+    
+    
+    
+/**ticket_details_media css starts**/
+
+.ticket_details_sec.media .right_sec .all_mediabox ul li a {
+    font-size: 13px;
+}
+    
+ 
+    
+/**dashboard page css starts**/
+
+.dashboard_sec .row {
+    flex-wrap: wrap;
+}
+.dashboard_sec .left_sec {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}    
+.dashboard_sec {
+    padding-bottom: 60px;
+}
+.dashboard_sec .right_sec {
+    width: 310px;
+    max-width: 310px;
+    flex: 0 0 310px;
+    margin-top: 60px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: auto;
+    position: relative;
+    margin-left: 0;
+    right: 0;
+}
+    
+    
+ 
+    
+/**admin_dashboard page**/ 
+    
+.admin_dashboard_sec {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 45px;
+}
+.admin_dashboard_sec .left_sec .top_sec .heading h2 {
+    font-size: 20px;
+    line-height: 26px;
+}
+.admin_dashboard_sec .left_sec .top_sec {
+    margin-bottom: 20px;
+}
+.admin_dashboard_sec .right_sec {
+    width: 310px;
+    max-width: 310px;
+    flex: 0 0 310px;
+    padding-left: 12px;
+}
+.admin_dashboard_sec .row {
+    flex-wrap: wrap;
+}
+.admin_dashboard_sec .left_sec {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-right: 12px;
+}    
+.admin_dashboard_sec .left_sec .box .heading {
+    min-height: 44px;
+}
+.admin_dashboard_sec .left_sec .box .list {
+    height: 42px;
+}
+.modal-dialog {
+    max-width: 90%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-header {
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+h5.modal-title {
+    font-size: 17px;
+}
+.modal-body {
+    padding: 30px 20px 40px 20px;
+}
+.modal-body .row .col-lg-6{
+    width: 50%;
+    max-width: 50%;
+}
+.modal-body .formbold-form-input {
+    height: 42px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 12px;
+}
+.modal-body label.formbold-form-label {
+    padding-bottom: 6px;
+}
+.modal-body button.formbold-btn {
+    height: 48px;
+    font-size: 13px;
+}
+.modal-header button.btn-close-icon {
+    right: 20px;
+}
+
+
+
+
+
+
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 767px){
+
+/**login_page css starts**/
+.login_page_sec .login_form {
+    margin-top: 15px;
+}
+.login_page_sec img.main_logo {
+    top: 40px;
+    width: 230px;
+}
+    
+    
+    
+/**ticket_details css starts**/  
+.ticket_details_sec .about_ticketbox .box {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+.ticket_details_sec .about_ticketbox .box .heading h5 {
+    font-size: 12px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 {
+    font-size: 12px;
+}
+.ticket_details_sec .about_ticketbox .box .heading {
+    width: 42%;
+    max-width: 42%;
+    flex: 0 0 42%;
+}
+.ticket_details_sec .about_ticketbox .box .details {
+    width: 54%;
+    max-width: 54%;
+    flex: 0 0 54%;
+}
+.ticket_details_sec .left_sec .heading h2 {
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+.ticket_details_sec {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+
+
+/**dashboard page css starts**/
+    
+.dashboard_sec .left_sec .top_sec {
+    margin-bottom: 10px;
+    display: block;
+}
+.dashboard_sec .left_sec .search input#Keywords {
+    width: 100%;
+    height: 40px;
+}    
+.dashboard_sec .left_sec .search {
+    width: 100%;
+    height: 40px;
+}    
+.dashboard_sec .left_sec .search::before {
+    top: 9px;
+}
+.dashboard_sec .left_sec .heading h2 {
+    font-size: 20px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.dashboard_sec {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 45px;
+}
+.dashboard_sec .left_sec .pagination {
+    justify-content: flex-start;
+}
+.left-sidebar-menu {
+    padding-top: 100px;
+}
+
+
+    
+    
+    
+.modal-body .row .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+}    
+.modal-body {
+    padding: 20px 20px 40px 20px;
+}
+.modal-body .formbold {
+    margin-bottom: 20px;
+}
+.modal-body .formbold-form-input {
+    height: 40px;
+}
+
+
+
+
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 575px){
+    
+/**login_page css starts**/
+.login_page_sec .login_form {
+    width: 470px;
+    margin-top: 25px;
+}  
+.login_page_sec .login_form .form_sec {
+    padding: 40px 25px;
+}    
+.login_page_sec .form_sec .form-group.formbold label {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+    
+/**ticket_details css starts**/  
+    
+.ticket_details_sec {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.TopHeader .btn-fullscreen img {
+    width: 13px;
+}
+.TopHeader .btn-notification img {
+    width: 13px;
+}
+.TopHeader .btn-darkmode img {
+    width: 13px;
+}
+.TopHeader .btn-phone img {
+    width: 13px;
+}
+.TopHeader .btn-search img {
+    width: 13px;
+}
+.TopHeaderRow .col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.TopHeaderRow .col:first-child {
+    padding-right: 5px;
+}
+.ticket_details_sec .left_sec .chat_box .message-box.friend-message {
+    max-width: 80%;
+}
+.ticket_details_sec .left_sec .chat_box .message-box.my-message {
+    max-width: 80%;
+}
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords {
+    width: 330px;
+}
+.ticket_details_sec .left_sec .bottom_sec .file-loading {
+    width: 35px;
+    height: 35px;
+}
+.ticket_details_sec .left_sec .bottom_sec .file-loading input#multiplefileupload {
+    width: 35px;
+    height: 35px;
+}
+.ticket_details_sec .left_sec .bottom_sec .file-loading::before {
+    width: 13px;
+    background-size: 13px;
+    height: 13px;
+}
+.ticket_details_sec .left_sec .bottom_sec .submit_btn button#form-submit img {
+    width: 20px;
+}
+.ticket_details_sec .right_sec {
+    margin-top: 40px;
+}
+.ticket_details_sec .left_sec .message-box .profile_pic img {
+    width: 23px;
+}
+
+
+
+/**dashboard page css starts**/
+    
+.dashboard_sec {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+    
+    
+
+/**admin_dashboard page**/
+.admin_dashboard_sec {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.modal-header {
+    height: 60px;
+}
+h5.modal-title {
+    font-size: 15px;
+}
+.modal-dialog {
+    margin-top: 50px;
+}
+.modal-body button.formbold-btn {
+    height: 45px;
+    font-size: 12px;
+    letter-spacing: 0.025rem;
+}
+
+
+
+
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 480px){
+
+/**login_page css starts**/
+.login_page_sec .login_form {
+    width: 430px;
+    padding: 35px 10px;
+}    
+.login_page_sec .form_sec .form-group.submit_btn button {
+    height: 48px;
+    border-radius: 12px;
+}
+.login_page_sec .form_sec .form-group.formbold input {
+    height: 48px;
+    border-radius: 12px;
+    padding-left: 16px;
+}
+.login_page_sec .form_sec label.form-remember {
+    font-size: 13px;
+}
+.login_page_sec .form_sec a.form-recovery {
+    font-size: 13px;
+}
+.login_page_sec .form_sec label.form-remember input[type="checkbox"] {
+    margin-right: 8px;
+    height: 14px;
+    width: 14px;
+}
+.login_page_sec .login_form .form_sec {
+    border-radius: 25px;
+}
+.login_page_sec .form_sec .form-group.formbold input::placeholder{
+    font-size: 12px;
+}
+.login_page_sec .form_sec .form-group.formbold.pass::before {
+    right: 16px;
+}
+.login_page_sec .login_form .heading h3 {
+    font-size: 25px;
+    line-height: 32px;
+}
+
+
+/**ticket_details css starts**/ 
+    
+.ticket_details_sec .left_sec .chat_box .message-box.friend-message {
+    max-width: 100%;
+} 
+.ticket_details_sec {
+    padding-left: 2px;
+    padding-right: 2px;
+}    
+.ticket_details_sec .left_sec .chatbox_container {
+    padding: 30px 12px 35px 12px;
+    border-radius: 20px;
+}
+.ticket_details_sec .left_sec .chat_box .message-box.my-message {
+    max-width: 100%;
+}
+.ticket_details_sec .left_sec .message-box .profile_pic img {
+    width: 21px;
+}
+.ticket_details_sec {
+    padding-bottom: 55px;
+}
+.footer_logosec .footer_logo {
+    width: 200px;
+}
+.footer_logosec {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+.ticket_details_sec .right_sec .about_ticketbox{
+    border-radius: 20px;    
+}    
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords {
+    width: 230px;
+}    
+.ticket_details_sec .left_sec .bottom_sec {
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-right: 5px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox ul li a {
+    font-size: 11px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox {
+    padding: 70px 15px 30px 16px;
+    border-radius: 20px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox .heading {
+    height: 52px;
+    padding-left: 16px;
+    border-radius: 20px 20px 0px 0px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox button.btn.btn-close-icon {
+    right: 5px;
+}    
+.ticket_details_sec.media .right_sec .all_mediabox ul li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+    
+    
+
+    
+/**dashboard page css starts**/
+    
+.dashboard_sec {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 40px;
+}
+.dashboard_sec .left_sec .heading h2 {
+    max-width: 98%;
+}    
+.left-sidebar {
+    width: 52px;
+}
+.left-sidebar .left-sidebar-header {
+    height: 52px;
+    padding: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+}
+.left-sidebar .left-sidebar-header img {
+    width: 30px;
+}
+.ticket_details_sec {
+    margin-left: 52px;
+}
+.TopHeader {
+    padding-inline-start: 52px;
+}
+.left-sidebar-menu ul li a {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 25px;
+}
+.left-sidebar-menu ul li button.btn.btn-exit {
+    width: 36px;
+    height: 36px;
+}
+.footer_logosec {
+    margin-left: 52px;
+}
+.copyright_sec {
+    margin-left: 52px;
+}
+.dashboard_sec {
+    margin-left: 52px;
+}
+
+
+
+
+
+/**admin_dashboard page**/
+.admin_dashboard_sec {
+    margin-left: 52px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.admin_dashboard_sec .left_sec .box .heading h4 {
+    font-size: 12px;
+}
+.admin_dashboard_sec .left_sec .box .heading a {
+    font-size: 10px;
+}
+.admin_dashboard_sec .left_sec .box .heading {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.admin_dashboard_sec .left_sec .box .list {
+    padding-left: 13px;
+    padding-right: 12px;
+}
+.admin_dashboard_sec .left_sec .box .list .name h6 {
+    font-size: 11px;
+}
+.admin_dashboard_sec .left_sec .box .name input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+}
+.admin_dashboard_sec .left_sec .box .email {
+    font-size: 11px;
+}
+.modal-body label.formbold-form-label {
+    font-size: 12px;
+}
+.modal-header {
+    height: 55px;
+}
+.modal-header button.btn-close-icon img {
+    width: 12px;
+}
+.modal-body {
+    padding: 15px 20px 40px 20px;
+}
+.modal-body label.formbold-form-label {
+    padding-bottom: 4px;
+}
+.modal-body .formbold-form-input {
+    height: 37px;
+}
+.modal-body .formbold {
+    margin-bottom: 12px;
+}
+.dashboard_sec .right_sec {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}  
+.admin_dashboard_sec .right_sec {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}  
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 440px){
+
+/**login_page css starts**/
+.login_page_sec .login_form {
+    width: 400px;
+    padding: 35px 5px;
+} 
+.login_page_sec .login_form .form_sec {
+    padding: 40px 20px;
+}
+.login_page_sec img.main_logo {
+    top: 30px;
+    width: 220px;
+}
+
+
+    
+/**ticket_details css starts**/     
+    
+.ticket_details_sec .left_sec .message-box .message .pdf_upload a {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0px;
+}    
+.ticket_details_sec .left_sec .message-box .message .pdf_upload {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    display: block;
+}
+.ticket_details_sec .left_sec .message-box.friend-message .message {
+    padding: 7px 15px 7px 10px;
+}
+.ticket_details_sec .left_sec .message-box.my-message .message {
+    padding: 7px 10px 7px 15px;
+}
+.ticket_details_sec .about_ticketbox .box .heading h5 {
+    font-size: 11px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 {
+    font-size: 11px;
+}
+.ticket_details_sec .about_ticketbox .box .details h6 img.profile_pic {
+    width: 22px;
+}
+.TopHeaderProfile .Profile-pic {
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+}
+.TopHeaderProfile {
+    padding-top: 9px;
+    align-items: center;
+}
+.TopHeader .btn-search {
+    margin-top: 14px;
+    width: 24px;
+    height: 24px;
+}
+.TopHeader .btn-phone {
+    margin-top: 14px;
+    width: 24px;
+    height: 24px;
+}
+.TopHeader .btn-darkmode {
+    margin-top: 14px;
+    width: 24px;
+    height: 24px;
+}
+.TopHeader .btn-notification {
+    margin-top: 14px;
+    width: 24px;
+    height: 24px;
+}
+.TopHeader .btn-notification span {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+    line-height: 12px;
+}
+.TopHeader .btn-fullscreen {
+    margin-top: 14px;
+    width: 24px;
+    height: 24px;
+}
+.TopHeader .btn-close-icon {
+    margin-top: 14px;
+    width: 24px;
+    height: 24px;
+}
+.ticket_details_sec .left_sec .heading h2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.ticket_details_sec .left_sec .message-box .profile_pic img {
+    width: 17px;
+}
+.ticket_details_sec .left_sec .message-box .txt .time {
+    font-size: 9px;
+}
+.TopHeaderRow .col {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.TopHeaderRow .col:first-child {
+    padding-right: 0px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox .heading h3 {
+    font-size: 13px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox .heading {
+    height: 48px;
+}
+.ticket_details_sec.media .right_sec .all_mediabox {
+    padding: 65px 15px 30px 16px;
+}
+
+
+
+
+
+/**dashboard page css starts**/
+
+.dashboard_sec .right_sec {
+    margin-top: 50px;
+}  
+    
+    
+.admin_dashboard_sec .left_sec .box .list .name h6 {
+    font-size: 10px;
+}
+.admin_dashboard_sec .left_sec .box .email {
+    font-size: 10px;
+}
+.admin_dashboard_sec .left_sec .box .name input[type="checkbox"] {
+    width: 9px;
+    height: 9px;
+    margin-right: 6px;
+}
+.admin_dashboard_sec .left_sec .box .heading h4 {
+    font-size: 11px;
+}
+.admin_dashboard_sec .left_sec .box .list {
+    padding-left: 11px;
+    padding-right: 10px;
+}
+.admin_dashboard_sec .left_sec .box .heading {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+h5.modal-title {
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+}
+
+
+@media only screen and (max-width: 390px){
+
+    
+/**login_page css starts**/    
+.login_page_sec .login_form {
+    width: 350px;
+    margin-top: 10px;
+}
+.login_page_sec .login_form .form_sec {
+    padding: 35px 17px;
+}
+.login_page_sec .form_sec .form-group.submit_btn button {
+    height: 45px;
+}
+.login_page_sec .form_sec a.form-recovery {
+    font-size: 12px;
+}
+.login_page_sec .form_sec label.form-remember {
+    font-size: 12px;
+}
+.login_page_sec .form_sec .form-group.formbold input {
+    height: 46px;
+}
+.login_page_sec img.main_logo {
+    top: 35px;
+}
+.ticket_details_sec .left_sec .bottom_sec .type_message input#Keywords {
+    width: 180px;
+}
+.ticket_details_sec .left_sec .bottom_sec .file-loading {
+    margin-right: 15px;
+}
+
+
+
+
+
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

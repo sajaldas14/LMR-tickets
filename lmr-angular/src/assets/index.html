@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+      
+    <link href="images/le-mini-rider-logo-white-1245.png" rel="icon">
+
+    <title>Plateforme tickets - After-sales Management</title>
+      
+    <link href="css/style.css" rel="stylesheet" >
+      
+    <link href="css/media-responsive.css" rel="stylesheet">  
+    
+  </head>
+  <body class="element" id="element">
+    
+      
+      <header class="TopHeader">
+      
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                  
+                  <div class="d-flex flex-row-reverse TopHeaderRow">
+                      
+                      <div class="col">
+                            <div class="TopHeaderProfile">
+                                <div class="Profile-pic">
+                                    <img src="images/profile-pic.jpg" alt="">
+                                </div>
+                                <div class="Profile-cont">
+                                    <h5 class="profile-name">Json Taylor</h5>
+                                    <p class="profile-designation">Fournisseur</p>
+                                </div>
+                            </div>
+                      </div>
+                      
+                      <div class="col">
+                      
+                          <button class="btn btn-fullscreen" onclick="var el = document.getElementById('element'); el.webkitRequestFullscreen();"><img src="images/fullscreen-icon.svg" alt=""></button>
+                      
+                      </div>
+                      
+                      <div class="col">
+                          <button class="btn btn-notification">
+                              <span>5</span>
+                              <img src="images/notification-icon.svg" alt=""></button>
+                      </div>
+                      
+                      <div class="col">
+                          <button class="btn btn-darkmode"><img src="images/darkmode-icon.svg" alt=""></button>
+                      </div>
+                      
+                      <div class="col">
+                        <button class="btn btn-phone">
+                            <img src="images/phone-icon.svg" alt="">
+                          </button>
+                      </div>
+                      
+                      <div class="col">
+                        <button class="btn btn-search">
+                            <img src="images/search-icon.svg" alt="">
+                          </button>
+                      </div>
+                      
+                      
+                      <div class="col me-auto">
+                      
+                          <button class="btn btn-close-icon"><img src="images/close-icon.svg" alt=""></button>
+                      
+                      </div>
+                      
+                  
+                  </div>
+                    
+              </div>
+          
+          </div>
+              </div>
+      
+      </header>
+      
+<aside class="left-sidebar">
+          <div class="left-sidebar-header"> 
+              <a href="index.html" class="header-logo"> 
+                  <img src="images/small-logo.png" alt="logo" class="desktop-logo">
+              </a> 
+          </div>
+          
+          
+          <div class="left-sidebar-menu">
+              <ul>
+                  <li class="home-nav active"><a href="#"><img src="images/home.svg"></a></li>
+                  <li class="user-nav"><a href="#"><img src="images/user-icon.svg"></a></li>
+                  <li class="notification-nav">
+                    <a class="btn btn-notification" href="#">
+                        <span class="notification-number">5</span>
+                        <img src="images/notification-icon.svg" alt="">
+                    </a>
+                  </li>
+                  <li class="phone-nav"><a href="#"><img src="images/phone-icon.svg"></a></li>                  
+                  <li class="exit-nav"><button type="submit" class="btn btn-exit"><img src="images/exit-icon.svg"></button></li>
+              </ul>
+          </div>
+          
+          
+      
+</aside>
+      
+      
+      
+<div class="dashboard_sec">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="left_sec">
+                <div class="top_sec">
+                    <div class="heading">
+                        <h2>Plateforme tickets - After-sales Management</h2>
+                    </div>
+                    <div class="search">
+                        <input type="text" class="form-control" id="Keywords" placeholder="Search by ID ticket, Réf. commande, Fournisseur , Interlocuteur">
+                    </div>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>ID ticket</th>
+                                <th>Réf. commande</th>
+                                <th>Description</th>
+                                <th>Date du ticket</th>
+                                <th>Date de clôture</th>
+                                <th>Fournisseur</th>
+                                <th>Interlocteur assigné</th>
+                                <th>Statut</th>
+                            </tr> 
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P01</td>
+                                <td>KOMODKO</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>15-06-2023</td>
+                                <td><img class="icon" src="images/table_pic1.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/byron.png" alt="">Byron Chartier</h6></td>
+                                <td><button class="new">Nouveau</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P08</td>
+                                <td>DRAISIENNE16</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>25-06-2023</td>
+                                <td><img class="icon" src="images/table_pic2.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/serge.png" alt="">Serge Caouette</h6></td>
+                                <td><button class="pending">En cours</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P011</td>
+                                <td>DBRV14</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>14-08-2023</td>
+                                <td><img class="icon" src="images/table_pic3.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/beltane.png" alt="">Beltane Chesnay</h6></td>
+                                <td><button class="complete">Clôturé</button></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P01</td>
+                                <td>DBRRO12</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>20-09-2023</td>
+                                <td><img class="icon" src="images/table_pic1.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/byron.png" alt="">Byron Chartier</h6></td>
+                                <td><button class="new">Nouveau</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P08</td>
+                                <td>11730250101</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>15-10-2023</td>
+                                <td><img class="icon" src="images/table_pic2.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/serge.png" alt="">Serge Caouette</h6></td>
+                                <td><button class="pending">En cours</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P011</td>
+                                <td>709705O</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>18-11-2023</td>
+                                <td><img class="icon" src="images/table_pic3.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/beltane.png" alt="">Beltane Chesnay</h6></td>
+                                <td><button class="complete">Clôturé</button></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P01</td>
+                                <td>DBRBL12</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>05-07-2023</td>
+                                <td><img class="icon" src="images/table_pic1.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/byron.png" alt="">Byron Chartier</h6></td>
+                                <td><button class="new">Nouveau</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P08</td>
+                                <td>VPFIAT500BL</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>20-07-2023</td>
+                                <td><img class="icon" src="images/table_pic2.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/serge.png" alt="">Serge Caouette</h6></td>
+                                <td><button class="pending">En cours</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>LMR-P011</td>
+                                <td>MSB650B</td>
+                                <td>Le Lorem Ipsum est simplement</td>
+                                <td>05-06-2023</td>
+                                <td>15-08-2023</td>
+                                <td><img class="icon" src="images/table_pic3.png" alt=""></td>
+                                <td><h6><img class="profile_pic" src="images/beltane.png" alt="">Beltane Chesnay</h6></td>
+                                <td><button class="complete">Clôturé</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12">
+                    <div class="pagination_sec">
+                        <nav class="pagination" data-pagination="">
+                          <a class="click" href="#" disabled=""><img src="images/arrow-prev.svg" alt=""></a>
+                          <ul>
+                            <li><a class="current" href="#1">1</a>
+                            </li><li><a href="#2">2</a>
+                            </li><li><a href="#3">3</a>
+                            </li><li><a href="#4">4</a>
+                          </li></ul>
+                          <a class="click" href="#2"><img src="images/arrow-next.svg" alt=""></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="right_sec">
+                <div class="main_box">
+                    <div class="box pink">
+                        <div class="txt">
+                            <img class="icon" src="images/pink_box_icon.svg" alt="">
+                            <h6>Nouveau billet</h6>
+                        </div>
+                        <div class="num">
+                            <h3>43</h3>
+                        </div>
+                    </div>
+                    <div class="box green">
+                        <div class="txt">
+                            <img class="icon" src="images/green_box_icon.svg" alt="">
+                            <h6>Billet Terminé</h6>
+                        </div>
+                        <div class="num">
+                            <h3>220</h3>
+                        </div>
+                    </div>
+                    <div class="box yellow">
+                        <div class="txt">
+                            <img class="icon" src="images/yellow_box_icon.svg" alt="">
+                            <h6>Ticket en cours</h6>
+                        </div>
+                        <div class="num">
+                            <h3>78</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+      
+      
+      
+    
+<div class="footer_logosec">
+    <div class="container">
+        <div class="row">
+            <div class="footer_logo">
+                <img src="images/leminirider-logo-white.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>      
+      
+      
+<div class="copyright_sec">
+    <div class="container">
+        <div class="row">
+            <p>
+                <span class="mobile-d-block">© 2024 - Le Mini Rider Tous droits réservés</span>
+                <span class="mobile-d-none">|</span>
+                <span class="mobile-d-block">Powered by <a href="https://www.stratteos.fr" target="_blank"><img src="images/Frame.png" width="100" height="auto" class="logo"></a></span>
+            </p>
+        </div>
+    </div>
+</div>
+      
+      
+      
+      
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      
+    <script src="js/bootstrap.min.js"></script>
+      
+    
+      
+    
+  </body>
+</html>

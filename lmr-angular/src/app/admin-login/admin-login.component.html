@@ -1,0 +1,35 @@
+<div class="login_page_sec">
+    <img class="main_logo" src="assets/images/leminirider-logo-white.png" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="login_form">
+                <div class="heading">
+                    <h3>Bonjour,</h3>
+                    <h6>Connectez-vous ou créez un compte LEMINIRIDER PRO.</h6>
+                </div>
+                <div class="form_sec">
+                    <div class="form_cont">
+                        <div class="form-group formbold">
+                            <label for="email">E-mail<sup>*</sup></label>
+                            <input type="email" class="mb-0" [email]="loginData.username!==''" #username="ngModel" required [(ngModel)]="loginData.username"  placeholder="mail@company.fr">
+                            <span class="text-danger" *ngIf="username.touched && username.errors?.['required']">E-mail Required</span>
+                            <span class="text-danger" *ngIf="username.touched && username.errors?.['email']">Email is Invalid</span>
+                        </div>
+                        <div class="form-group formbold pass mt-3">
+                            <label for="password">Mot de passe<sup>*</sup></label>
+                            <input  #x type="password" class="mb-0" #password="ngModel" required [(ngModel)]="loginData.password" placeholder="Min. 8 characters">
+                            <button  (click)="x.type=x.type=='password'?'text':'password'" class="pass_show" type="button"><img src="assets/images/view.png" alt=""></button>
+                            <span class="text-danger" *ngIf="password.touched && password.errors?.['required']">Mot de passe Required</span>
+                        </div>                            
+                        <div class="form-group btm_part">
+                             <label class="form-remember"><input type="checkbox">Rester connecté(e)</label><a class="form-recovery" href="#">Mot de passe oublié ?</a>
+                        </div>                        
+                        <div class="form-group submit_btn">
+                            <button type="button" [disabled]="!username.valid || !password.valid" (click)="onLogin()">Connexion</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>

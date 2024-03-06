@@ -1,0 +1,23 @@
+<aside class="left-sidebar">
+    <div class="left-sidebar-header"> 
+        <a href="index.html" class="header-logo"> 
+            <img src="assets/images/small-logo.png" alt="logo" class="desktop-logo">
+        </a> 
+    </div>
+    
+    
+    <div class="left-sidebar-menu">
+        <ul>
+            <li class="home-nav" routerLinkActive="active"><a routerLink="dashboard"><img src="assets/images/home.svg"></a></li>
+            <li class="user-nav" routerLinkActive="active"><a routerLink="user"><img src="assets/images/user-icon.svg"></a></li>
+            <li class="notification-nav" routerLinkActive="active">
+              <a class="btn btn-notification" routerLink="message" >
+                  <span class="notification-number">5</span>
+                  <img src="assets/images/notification-icon.svg" alt="">
+              </a>
+            </li>
+            <li class="phone-nav"><a href="#"><img src="assets/images/phone-icon.svg"></a></li>                  
+            <li class="exit-nav"><a (click)="logOff()" class="btn btn-exit"><img src="assets/images/exit-icon.svg"></a></li>
+        </ul>
+    </div>
+</aside>>

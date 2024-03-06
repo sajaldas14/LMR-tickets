@@ -1,0 +1,225 @@
+<div class="admin_dashboard_sec">
+    <div class="container-fluid">
+        <div class="row main">
+            <div class="left_sec mds-w-100">
+                <div class="top_sec">
+                    <div class="heading">
+                        <h2>Welcome Alex.E</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 left">
+                        <div class="box suppliers">
+                            <div class="heading">
+                                <h4>Tous les fournisseurs</h4>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#supplierModal" (click)="addSuppliers()">+  Ajouter un fournisseur</a>
+                            </div>
+                            <div class="list" *ngFor = "let suppliers of readSuppliers | pagination:readSuppliersPageSize:readSuppliersCurrentPage ">
+                                <div class="list-left-section">
+                                <div class="name"><input type="checkbox"><h6>{{suppliers.name}}</h6></div>
+                                <div class="listlogo-icon"><img class="" src="assets/images/logo-1.png" alt=""></div>
+                                <div class="list-email"><a href="mailto:{{suppliers.email}}"><img src="assets/images/mail-outline.svg" width="16">{{suppliers.email}}</a></div>
+                                <div class="list-telephone"><a href="tel:{{suppliers.phone}}"><img src="assets/images/call-outline.svg" alt="" width="16">{{suppliers.phone}}</a></div>
+                                </div>
+                                <div class="ms-auto list-right-section">
+                                <div class="edit"><button data-bs-toggle="modal" data-bs-target="#supplierModal" (click)="editSuppliers(suppliers)"><img src="assets/images/edit_icon.svg" alt=""></button></div>
+                                <button class="btn btn-link btn-delete" (click)="deleteSuppliers(suppliers.id)"><img src="assets/images/trash-outline.svg" alt="" width="16" height="auto"></button>
+                                </div>
+                            </div>
+                            <ul class="pagination">
+                                <li *ngFor="let e of readSuppliersPages; let i = index" (click)="changeReadSuppliersPage(i)"><a>{{i+1}}</a></li>
+                            </ul>   
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 right">
+                        <div class="box users">
+                            <div class="heading">
+                                <h4>Tous les utilisateurs</h4>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#userModal" (click)="addUsers()">+  Ajouter un nouvel utilisateur</a>
+                            </div>
+                            <div class="list" *ngFor = "let users of readUsers | pagination:readUsersPageSize:readUsersCurrentPage">
+                                <div class="list-left-section">
+                                <div class="name"><input type="checkbox"><h6>{{users.name}}</h6></div>
+                                <div class="listprofilepic"><img class="" src="assets/images/profile-pic.jpg" alt=""></div>
+                                <div class="list-email"><a href="mailto:{{users.email}}"><img src="assets/images/mail-outline.svg" width="16">{{users.email}}</a></div>
+                                <div class="list-telephone"><a href="tel:{{users.phone}}"><img src="assets/images/call-outline.svg" alt="" width="16">{{users.phone}}</a></div>
+                                </div>
+                                <div class="ms-auto list-right-section">
+                                <div class="edit"><button data-bs-toggle="modal" data-bs-target="#userModal" (click)="editUsers(users)"><img src="assets/images/edit_icon.svg" alt=""></button></div>
+                                <button class="btn btn-link btn-delete" (click)="deleteUser(users.id)"><img src="assets/images/trash-outline.svg" alt="" width="16" height="auto"></button>
+                                </div>
+                            </div>
+                            <ul class="pagination">
+                                <li *ngFor="let e of readUsersPages; let i = index" (click)="changeReadUsersPage(i)"><a>{{i+1}}</a></li>
+                            </ul>  
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
+</div>
+      
+      
+      
+<!--popup for a new_supplier form-->
+      
+<div class="modal fade" id="supplierModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+            <span  *ngIf="formData.id==0">Ajouter un fournisseur</span>
+            <span  *ngIf="formData.id!=0">Modifier un fournisseur</span>
+        </h5>
+          <button class="btn btn-close-icon"  data-bs-dismiss="modal" aria-label="Close"><img src="assets/images/close-icon.svg" alt=""></button>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-6">
+                <div class="formbold">
+                    <label for="name" class="formbold-form-label">Nom et prénom<sup>*</sup></label>
+                    <input type="text" name="nom" id="nom" #name="ngModel" required [(ngModel)]="formData.name" class="formbold-form-input">
+                    <span class="text-danger" *ngIf="name.touched && name.errors?.['required']">Nom Required</span>
+                </div>
+            </div>
+            <div class="col-lg-6"></div>
+           
+             <div class="col-lg-6">
+                    <div class="formbold">
+                        <label for="email" class="formbold-form-label">Email<sup>*</sup></label>
+                        <input type="email" [email]="formData.email!==''"  #email="ngModel" required [(ngModel)]="formData.email" class="formbold-form-input">
+                        <span class="text-danger" *ngIf="email.touched && email.errors?.['required']">Email Required</span>
+                        <span class="text-danger" *ngIf="email.touched && email.errors?.['email']">Email is Invalid</span>
+                    </div>
+            </div>
+            <div class="col-lg-6">
+                    <div class="formbold">
+                        <label for="password" class="formbold-form-label">Mot de passe<sup>*</sup></label>
+                        <input  #x type="password" #password="ngModel" required [(ngModel)]="formData.password" class="formbold-form-input">
+                        <button  (click)="x.type=x.type=='password'?'text':'password'" class="pass_show" type="button"><img src="assets/images/view.png" alt=""></button>
+                        <span class="text-danger" *ngIf="password.touched && password.errors?.['required']">Mot de passe Required</span>
+                    </div>
+            </div>
+            
+            <div class="col-lg-12">
+                    <div class="formbold">
+                        <label for="address" class="formbold-form-label">Adresse<sup>*</sup></label>
+                        <textarea class="formbold-form-input" #address="ngModel" required [(ngModel)]="formData.address"></textarea>
+                        <span class="text-danger" *ngIf="address.touched && address.errors?.['required']">Adresse Required</span>
+                    </div>
+            </div>
+              <div class="col-lg-6">
+                    <div class="formbold">
+                        <label for="tel" class="formbold-form-label">Numéro de téléphone<sup>*</sup></label>
+                        <input type="number" #phone="ngModel" required [(ngModel)]="formData.phone" class="formbold-form-input">
+                        <span class="text-danger" *ngIf="phone.touched && phone.errors?.['required']">Numéro de téléphone Required</span>
+                    </div>
+            </div>
+             
+              <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <div class="formbold filechoose">
+                    <label for="formFile" class="formbold-form-label">Choisissez l'image du logo</label>
+                    <input class="" type="file" id="formFile">
+                    <em>Veuillez télécharger la taille du logo 120px X 46px.</em>
+                </div>
+            </div>  
+              
+            <div class="col-lg-12">
+                <div class="button">
+                    <button data-bs-toggle="modal" data-bs-target="#supplierModal" class="formbold-btn" type="submit" *ngIf="formData.id==0" [disabled]="!name.valid || !phone.valid || !email.valid || !address.valid || !password.valid" (click)="onSaveSuppliers()">Ajouter un fournisseur</button>
+                </div>
+                <div class="button">
+                    <button data-bs-toggle="modal" data-bs-target="#supplierModal" class="formbold-btn savechanges" type="submit" *ngIf="formData.id!=0" [disabled]="!name.valid || !phone.valid || !email.valid || !address.valid || !password.valid" (click)="updateSuppliers()">Sauvegarder les modifications</button>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>      
+      
+      
+      
+<!--popup for a new_user form-->
+      
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleuserModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">            
+            <span  *ngIf="formData.id==0">Ajouter un utilisateurs</span>
+            <span  *ngIf="formData.id!=0">Modifier un utilisateurs</span>
+        </h5>
+          <button class="btn btn-close-icon"  data-bs-dismiss="modal" aria-label="Close"><img src="assets/images/close-icon.svg" alt=""></button>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-6">
+                <div class="formbold">
+                    <label for="name" class="formbold-form-label">Nom et prénom<sup>*</sup></label>
+                    <input type="text" #name="ngModel" required [(ngModel)]="formData.name" class="formbold-form-input">
+                    <span class="text-danger" *ngIf="name.touched && name.errors?.['required']">Nom Required</span>
+                </div>
+            </div>
+            <div class="col-lg-6"></div>
+           
+             <div class="col-lg-6">
+                    <div class="formbold">
+                        <label for="email" class="formbold-form-label">Email<sup>*</sup></label>
+                        <input type="email" [email]="formData.email!==''"  #email="ngModel" required [(ngModel)]="formData.email" class="formbold-form-input">
+                        <span class="text-danger" *ngIf="email.touched && email.errors?.['required']">Email Required</span>
+                        <span class="text-danger" *ngIf="email.touched && email.errors?.['email']">Email is Invalid</span>
+                    </div>
+            </div>
+            <div class="col-lg-6">
+                    <div class="formbold">
+                        <label for="password" class="formbold-form-label">Mot de passe<sup>*</sup></label>
+                        <input  #y type="password" #password="ngModel" required [(ngModel)]="formData.password" class="formbold-form-input">
+                        <button  (click)="y.type=y.type=='password'?'text':'password'" class="pass_show" type="button"><img src="assets/images/view.png" alt=""></button>
+                        <span class="text-danger" *ngIf="password.touched && password.errors?.['required']">Mot de passe Required</span>
+                    </div>
+            </div>
+            
+            <div class="col-lg-12">
+                    <div class="formbold">
+                        <label for="address" class="formbold-form-label">Adresse<sup>*</sup></label>
+                        <input type="address" #address="ngModel" required [(ngModel)]="formData.address" class="formbold-form-input">
+                        <span class="text-danger" *ngIf="address.touched && address.errors?.['required']">Adresse Required</span>
+                    </div>
+            </div>
+              <div class="col-lg-6">
+                    <div class="formbold">
+                        <label for="tel" class="formbold-form-label">Numéro de téléphone<sup>*</sup></label>
+                        <input type="number" #phone="ngModel" required [(ngModel)]="formData.phone" class="formbold-form-input">
+                        <span class="text-danger" *ngIf="phone.touched && phone.errors?.['required']">Numéro de téléphone Required</span>
+                    </div>
+            </div>
+             
+              <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <div class="formbold filechoose">
+                    <label for="formFile" class="formbold-form-label">Choisissez l'image du image de profil</label>
+                    <input class="" type="file" id="formFile">
+                    <em>Veuillez télécharger la taille image de profil 46px X 46px.</em>
+                </div>
+            </div>  
+              
+            <div class="col-lg-12">
+                <div class="button">
+                    <button data-bs-toggle="modal" data-bs-target="#userModal" class="formbold-btn" type="submit" *ngIf="formData.id==0" [disabled]="!name.valid || !phone.valid || !email.valid || !address.valid || !password.valid" (click)="onSaveUser()">Ajouter un utilisateurs</button>
+                </div>
+                <div class="button">
+                    <button data-bs-toggle="modal" data-bs-target="#userModal" class="formbold-btn savechanges" type="submit" *ngIf="formData.id!=0" [disabled]="!name.valid || !phone.valid || !email.valid || !address.valid || !password.valid" (click)="updateUser()">Sauvegarder les modifications</button> 
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>  
