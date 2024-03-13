@@ -1,0 +1,3 @@
+.toast:not(.showing):not(.show) {
+    opacity: 1;
+  }

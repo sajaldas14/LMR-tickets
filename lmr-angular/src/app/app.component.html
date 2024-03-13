@@ -1,1 +1,12 @@
 <router-outlet></router-outlet>
+
+
+<div *ngFor="let tost of tostMessages" class="toast position-fixed bottom-0 end-0 p-3 opacity-100" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">{{tost.title}}</strong>
+        <small class="text-muted"></small>
+        <button type="button" class="btn-close" aria-label="Close" (click)="removeTostMessage(tost.message)"></button>
+    </div>
+    <div class="toast-body">{{tost.message}}</div>
+</div>

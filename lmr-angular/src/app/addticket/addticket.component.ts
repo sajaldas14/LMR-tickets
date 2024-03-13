@@ -4,6 +4,7 @@ import { ApiserviceService } from '../service/apiservice.service';
 import { Router } from '@angular/router';
 import { AsyncPipe, NgClass, NgFor, NgIf } from '@angular/common';
 import { PaginationPipe } from '../shared/pipes/pagination.pipe';
+import { GlobalService } from '../service/global.service';
 
 @Component({
   selector: 'app-addticket',
@@ -28,7 +29,7 @@ export class AddticketComponent {
   userList: any[] = [];
 
 
-  constructor(private API: ApiserviceService, private route: Router) {
+  constructor(private API: ApiserviceService,private globalService:GlobalService, private route: Router) {
   }
 
   readTickets: any[] = [];
@@ -81,10 +82,10 @@ export class AddticketComponent {
   onSaveTicket() {
     this.API.createNewTicket(this.formData).subscribe((res: any) => {
       if (res.status) {
-        alert("Ticket created successfully");
+        this.globalService.showSuccessMessage("Ticket created successfully");
         this.refreshList();
       } else {
-        alert(res.message);
+        this.globalService.showErrorMessage(res.message);
       }
     });
   }
@@ -92,10 +93,10 @@ export class AddticketComponent {
   updateTicket() {
     this.API.updateTicket(this.formData).subscribe((res: any) => {
       if (res.status) {
-        alert("Ticket updated successfully");
+        this.globalService.showSuccessMessage("Ticket updated successfully");
         this.refreshList();
       } else {
-        alert(res.message);
+        this.globalService.showErrorMessage(res.message);
       }
     });
   }
@@ -103,7 +104,7 @@ export class AddticketComponent {
   deleteTicket(id: any) {
     if (confirm('Are you sure?')) {
       this.API.deleteTicket(id).subscribe((res: any) => {
-        alert("Ticket deleted successfully");
+        this.globalService.showSuccessMessage("Ticket deleted successfully");
         this.refreshList();
       });
     }

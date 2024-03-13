@@ -12,13 +12,11 @@ import { authUsersGuard } from './shared/guards/auth-users.guard';
 import { authAdminGuard } from './shared/guards/auth-admin.guard';
 import { UserAdminComponent } from './user-admin/user-admin.component';
 import { AddticketComponent } from './addticket/addticket.component';
-import { ToasteralertComponent } from './component/toasteralert/toasteralert.component';
 
 
 export const routes: Routes = [
     { 'path': '', title: 'Admin Login', component: AdminLoginComponent },
     { 'path': 'admin', title: 'Admin Login', component: AdminLoginComponent },
-    { 'path': 'toast', component: ToasteralertComponent },
     { 'path': 'users', title: 'User Login', component: LoginComponent },
     { 'path': 'supplier', title: 'Supplier Login', component: SupplierLoginComponent },
     { 'path': '404', title: 'Page Not Found', component: PageNotFoundComponent },
