@@ -17,7 +17,7 @@
                             <div class="list" *ngFor = "let suppliers of readSuppliers | pagination:readSuppliersPageSize:readSuppliersCurrentPage ">
                                 <div class="list-left-section">
                                 <div class="name"><input type="checkbox"><h6>{{suppliers.name}}</h6></div>
-                                <div class="listlogo-icon"><img class="" src="assets/images/logo-1.png" alt=""></div>
+                                <div class="listlogo-icon"><img class="" src="assets/uploads/{{suppliers.image}}" alt=""></div>
                                 <div class="list-email"><a href="mailto:{{suppliers.email}}"><img src="assets/images/mail-outline.svg" width="16">{{suppliers.email}}</a></div>
                                 <div class="list-telephone"><a href="tel:{{suppliers.phone}}"><img src="assets/images/call-outline.svg" alt="" width="16">{{suppliers.phone}}</a></div>
                                 </div>
@@ -41,7 +41,7 @@
                             <div class="list" *ngFor = "let users of readUsers | pagination:readUsersPageSize:readUsersCurrentPage">
                                 <div class="list-left-section">
                                 <div class="name"><input type="checkbox"><h6>{{users.name}}</h6></div>
-                                <div class="listprofilepic"><img class="" src="assets/images/profile-pic.jpg" alt=""></div>
+                                <div class="listprofilepic"><img class="" src="assets/uploads/{{users.image}}" alt=""></div>
                                 <div class="list-email"><a href="mailto:{{users.email}}"><img src="assets/images/mail-outline.svg" width="16">{{users.email}}</a></div>
                                 <div class="list-telephone"><a href="tel:{{users.phone}}"><img src="assets/images/call-outline.svg" alt="" width="16">{{users.phone}}</a></div>
                                 </div>
@@ -125,7 +125,7 @@
             <div class="col-lg-6">
                 <div class="formbold filechoose">
                     <label for="formFile" class="formbold-form-label">Choisissez l'image du logo</label>
-                    <input class="" type="file" id="formFile">
+                    <input class="" type="file" id="formFile" (change)="fileChanged($event)">
                     <em>Veuillez télécharger la taille du logo 120px X 46px.</em>
                 </div>
             </div>  
@@ -205,7 +205,7 @@
             <div class="col-lg-6">
                 <div class="formbold filechoose">
                     <label for="formFile" class="formbold-form-label">Choisissez l'image du image de profil</label>
-                    <input class="" type="file" id="formFile">
+                    <input class="" type="file" id="formFile" (change)="userfileChanged($event)">
                     <em>Veuillez télécharger la taille image de profil 46px X 46px.</em>
                 </div>
             </div>  

@@ -6,24 +6,25 @@ import { Observable, catchError, lastValueFrom, map, takeLast, throwError } from
   providedIn: 'root'
 })
 export class ApiserviceService {
-  upoadThumbnail(formData: FormData) {
-    return this.http.post(`${this.baseUrl}/api/thumbnail-upload`, formData);
+  baseUrl = "https://sketchwebs.online/construction/LMR/api";
+  //baseUrl = "http://localhost:3000";
+
+  uploadThumbnailFile(formData: FormData) {
+    return this.http.post(`${this.baseUrl}/api/file/single`,formData)
   }
 
-  //baseUrl = "https://sketchwebs.online/construction/LMR/api";
-  baseUrl = "http://localhost:8085";
-  
+
   constructor(private http: HttpClient) { }
 
-  Login(data:any): Observable<any> {
+  Login(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/user/login/`, data);
   }
 
-  UserLogin(data:any): Observable<any> {
+  UserLogin(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/user/userlogin/`, data);
   }
 
-  SupplierLogin(data:any): Observable<any> {
+  SupplierLogin(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/user/supplierlogin/`, data);
   }
 
@@ -35,27 +36,27 @@ export class ApiserviceService {
     return this.http.get(`${this.baseUrl}/api/user/`);
   }
 
-  createNewSupplier(data:any): Observable<any> {
+  createNewSupplier(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/supplier/add/`, data);
   }
 
-  createNewUser(data:any): Observable<any> {
+  createNewUser(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/user/add/`, data);
   }
 
-  updateSupplier(data:any): Observable<any> {
+  updateSupplier(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/supplier/update/${data.id}`, data);
   }
 
-  updateUsers(data:any): Observable<any> {
+  updateUsers(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/user/update/${data.id}`, data);
   }
 
-  deleteSupplier(data:any): Observable<any> {
+  deleteSupplier(data: any): Observable<any> {
     return this.http.delete(`${this.baseUrl}/api/supplier/delete/${data}`, data);
   }
 
-  deleteUsers(data:any): Observable<any> {
+  deleteUsers(data: any): Observable<any> {
     return this.http.delete(`${this.baseUrl}/api/user/delete/${data}`, data);
   }
 
@@ -63,15 +64,15 @@ export class ApiserviceService {
     return this.http.get(`${this.baseUrl}/api/ticket/`);
   }
 
-  createNewTicket(data:any): Observable<any> {
+  createNewTicket(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/ticket/add/`, data);
   }
 
-  updateTicket(data:any): Observable<any> {
+  updateTicket(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/ticket/update/${data.id}`, data);
   }
 
-  deleteTicket(data:any): Observable<any> {
+  deleteTicket(data: any): Observable<any> {
     return this.http.delete(`${this.baseUrl}/api/ticket/delete/${data}`, data);
   }
 

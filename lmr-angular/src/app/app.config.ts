@@ -10,4 +10,3 @@ import { CommonModule } from '@angular/common';
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration(),provideHttpClient(),CommonModule]
 };
-

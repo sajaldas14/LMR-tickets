@@ -30,31 +30,31 @@ export class UserAdminComponent {
 
   readSuppliers: any[] = [];
   readSuppliersPageSize: number = 8;
-  readSuppliersCurrentPage:number=0;
-  changeReadSuppliersPage(pageNumber:number){
+  readSuppliersCurrentPage: number = 0;
+  changeReadSuppliersPage(pageNumber: number) {
     this.readSuppliersCurrentPage = pageNumber;
   }
-  get readSuppliersPages():number[]{
-    const pages = Math.ceil(this.readSuppliers.length/this.readSuppliersPageSize);
-    let pagingList:number[] = [];
+  get readSuppliersPages(): number[] {
+    const pages = Math.ceil(this.readSuppliers.length / this.readSuppliersPageSize);
+    let pagingList: number[] = [];
 
-    for(let i =0;i<pages;i++){
+    for (let i = 0; i < pages; i++) {
       pagingList.push(i);
     }
     return pagingList;
   }
-  
+
   readUsers: any[] = [];
   readUsersPageSize: number = 8;
-  readUsersCurrentPage:number=0;
-  changeReadUsersPage(pageNumber:number){
+  readUsersCurrentPage: number = 0;
+  changeReadUsersPage(pageNumber: number) {
     this.readUsersCurrentPage = pageNumber;
   }
-  get readUsersPages():number[]{
-    const pages = Math.ceil(this.readUsers.length/this.readUsersPageSize);
-    let pagingList:number[] = [];
+  get readUsersPages(): number[] {
+    const pages = Math.ceil(this.readUsers.length / this.readUsersPageSize);
+    let pagingList: number[] = [];
 
-    for(let i =0;i<pages;i++){
+    for (let i = 0; i < pages; i++) {
       pagingList.push(i);
     }
     return pagingList;
@@ -97,13 +97,51 @@ export class UserAdminComponent {
   onSaveSuppliers() {
     this.API.createNewSupplier(this.formData).subscribe((res: any) => {
       if (res.status) {
-        alert("Suppliers created successfully");        
+        alert("Suppliers created successfully");
         this.refreshList();
       } else {
         alert(res.message);
       }
     });
   }
+
+  fileName: string = "";
+  fileChanged(event: any) {
+    const file: File = event.target.files[0];
+
+    if (file) {
+      this.fileName = file.name;
+
+      const formData = new FormData();
+
+      formData.append("thumbnail", file);
+      this.API.uploadThumbnailFile(formData).subscribe((d:any)=>{
+        this.formData.image= d.fileName;
+      },error=>alert("unable to upload the file. please use .jpeg .png"));
+
+      //const upload$ = this.http.post("/api/thumbnail-upload", formData);
+      //upload$.subscribe();
+    }
+  }
+
+  userfileChanged(event: any) {
+    const file: File = event.target.files[0];
+
+    if (file) {
+      this.fileName = file.name;
+
+      const formData = new FormData();
+
+      formData.append("thumbnail", file);
+      this.API.uploadThumbnailFile(formData).subscribe((d:any)=>{
+        this.formData.image= d.fileName;
+      },error=>alert("unable to upload the file. please use .jpeg .png"));
+
+      //const upload$ = this.http.post("/api/thumbnail-upload", formData);
+      //upload$.subscribe();
+    }
+  }
+
 
   updateSuppliers() {
     this.API.updateSupplier(this.formData).subscribe((res: any) => {
@@ -116,9 +154,9 @@ export class UserAdminComponent {
     });
   }
 
-  deleteSuppliers(id:any){
-    if(confirm('Are you sure?')){
-        this.API.deleteSupplier(id).subscribe((res: any) => {
+  deleteSuppliers(id: any) {
+    if (confirm('Are you sure?')) {
+      this.API.deleteSupplier(id).subscribe((res: any) => {
         alert("Suppliers deleted successfully");
         this.refreshList();
       });
@@ -167,9 +205,9 @@ export class UserAdminComponent {
     });
   }
 
-  deleteUser(id:any){
-    if(confirm('Are you sure?')) {
-        this.API.deleteUsers(id).subscribe((res: any) => {
+  deleteUser(id: any) {
+    if (confirm('Are you sure?')) {
+      this.API.deleteUsers(id).subscribe((res: any) => {
         alert("User deleted successfully");
         this.refreshList();
       });

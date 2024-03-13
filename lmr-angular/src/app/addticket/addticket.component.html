@@ -2,14 +2,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="left_sec">
-         
+
                 <div class="top_sec">
                     <div class="heading add-new-tkitsec">
                         <h2>Plateforme tickets - After-sales Management</h2>
-                        <button class="add-new-tkitbtn" data-bs-toggle="modal" data-bs-target="#ModalNewTikt" (click)="addTicket()"><span>+</span>Add new tickets</button>
+                        <button class="add-new-tkitbtn" data-bs-toggle="modal" data-bs-target="#ModalNewTikt"
+                            (click)="addTicket()"><span>+</span>Add new tickets</button>
                     </div>
                     <div class="search">
-                        <input type="text" class="form-control" id="Keywords" placeholder="Search by ID ticket, Réf. commande, Fournisseur , Interlocuteur">
+                        <input type="text" class="form-control" id="Keywords"
+                            placeholder="Search by ID ticket, Réf. commande, Fournisseur , Interlocuteur">
                     </div>
                 </div>
                 <div class="table">
@@ -26,39 +28,54 @@
                                 <th>Interlocteur assigné</th>
                                 <th>Statut</th>
                                 <th></th>
-                            </tr> 
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor = "let suppliers of readTickets | pagination:readSuppliersPageSize:readSuppliersCurrentPage ">
+                            <tr
+                                *ngFor="let suppliers of readTickets | pagination:readSuppliersPageSize:readSuppliersCurrentPage ">
                                 <td><input type="checkbox"></td>
-                                <td>LMR-P01</td>
-                                <td>KOMODKO</td>
-                                <td>Le Lorem Ipsum est simplement</td>
-                                <td>05-06-2023</td>
-                                <td>15-06-2023</td>
-                                <td><img class="icon" src="assets/images/table_pic1.png" alt=""></td>
-                                <td><h6><img class="profile_pic" src="assets/images/byron.png" alt="">Byron Chartier</h6></td>
-                                <td><button class="new">Nouveau</button></td>
+                                <td>{{suppliers.ref_order}}</td>
+                                <td>{{suppliers.ref_order}}</td>
+                                <td>{{suppliers.description}}</td>
+                                <td>{{suppliers.insert_date.slice(0,10)}}</td>
+                                <td>{{suppliers.insert_date.slice(0,10)}}</td>
+                                <td><img class="icon" src="assets/uploads/{{suppliers.s_image}}" alt=""></td>
                                 <td>
-                                    <button class="btn btn-link btn-chat"><img src="assets/images/chatbubble-ellipses-outline.svg"></button>
-                                    <button class="btn btn-link btn-edit" data-bs-toggle="modal" data-bs-target="#ModalNewTikt" (click)="editTicket(suppliers)"><img src="assets/images/edit_icon.svg" alt="" width="16" height="auto"></button>
-                                    <button class="btn btn-link btn-delete" (click)="deleteTicket(suppliers.id)"><img src="assets/images/trash-outline.svg" alt="" width="16" height="auto"></button>
+                                    <h6><img class="profile_pic" src="assets/uploads/{{suppliers.u_image}}" alt="">{{suppliers.u_name}}</h6>
+                                </td>
+                                <td><button [ngClass]="{'btn-primary': suppliers.status==='Nouveau', 'btn-success': suppliers.status==='Encours', 'btn-danger': suppliers.status==='Clôturé'}">{{suppliers.status}}</button></td>
+                                <td>
+                                    <button class="btn btn-link btn-chat"><img
+                                            src="assets/images/chatbubble-ellipses-outline.svg"></button>
+                                    <button class="btn btn-link btn-edit" data-bs-toggle="modal"
+                                        data-bs-target="#ModalNewTikt" (click)="editTicket(suppliers)"><img
+                                            src="assets/images/edit_icon.svg" alt="" width="16" height="auto"></button>
+                                    <button class="btn btn-link btn-delete" (click)="deleteTicket(suppliers.ticket_id)"><img
+                                            src="assets/images/trash-outline.svg" alt="" width="16"
+                                            height="auto"></button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-lg-12">
+                    <ul class="pagination">
+                        <li *ngFor="let e of readSuppliersPages; let i = index" (click)="changeReadSuppliersPage(i)"><a>{{i+1}}</a></li>
+                    </ul>  
                     <div class="pagination_sec">
                         <nav class="pagination" data-pagination="">
-                          <a class="click" href="#" disabled=""><img src="assets/images/arrow-prev.svg" alt=""></a>
-                          <ul>
-                            <li><a class="current" href="#1">1</a>
-                            </li><li><a href="#2">2</a>
-                            </li><li><a href="#3">3</a>
-                            </li><li><a href="#4">4</a>
-                          </li></ul>
-                          <a class="click" href="#2"><img src="assets/images/arrow-next.svg" alt=""></a>
+                            <a class="click" href="#" disabled=""><img src="assets/images/arrow-prev.svg" alt=""></a>
+                            <ul>
+                                <li><a class="current" href="#1">1</a>
+                                </li>
+                                <li><a href="#2">2</a>
+                                </li>
+                                <li><a href="#3">3</a>
+                                </li>
+                                <li><a href="#4">4</a>
+                                </li>
+                            </ul>
+                            <a class="click" href="#2"><img src="assets/images/arrow-next.svg" alt=""></a>
                         </nav>
                     </div>
                 </div>
@@ -94,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -102,90 +119,98 @@
 <!-- Modal 26-02-2024-->
 <div class="modal fade" id="ModalNewTikt" tabindex="-1" aria-labelledby="ModalNewTiktLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">         
-            <span  *ngIf="formData.id==0">Nouveau tickets</span>
-            <span  *ngIf="formData.id!=0">Modifier tickets</span>
-            
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="NewTiktcont">              
-                <div class="row">
-                    <div class="col-6">
-                      <div class="formbold">
-                         <label for="name" class="formbold-form-label">Réf. commande</label>
-                         <input type="text" #commande="ngModel" required [(ngModel)]="formData.commande" class="formbold-form-input">
-                         <span class="text-danger" *ngIf="commande.touched && commande.errors?.['required']">Réf. commande Required</span>
-                      </div>                      
-                    </div>                    
-                    
-                    
-                    <div class="col-12">
-                      <div class="formbold">
-                         <label for="name" class="formbold-form-label">Description</label>
-                         <textarea class="formbold-form-input"  #description="ngModel" required [(ngModel)]="formData.description"></textarea>
-                         <span class="text-danger" *ngIf="description.touched && description.errors?.['required']">Réf. commande Required</span>
-                      </div>
-                    </div>
-                    
-                    
-                    <div class="col-6">
-                      <div class="formbold">
-                         <label for="name" class="formbold-form-label">Interlocteur assigné</label>
-                         <select  class="formbold-form-input">
-                              <option>Interlocteur name 1</option> 
-                             <option>Interlocteur name 2</option> 
-                             <option>Interlocteur name 3</option> 
-                             <option>Interlocteur name 4</option> 
-                             <option>Interlocteur name 5</option> 
-                         </select>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="formbold">
-                         <label for="name" class="formbold-form-label">Fournisseur</label>
-                         <select  class="formbold-form-input">
-                              <option>Fournisseur name 1</option> 
-                             <option>Fournisseur name 2</option> 
-                             <option>Fournisseur name 3</option> 
-                             <option>Fournisseur name 4</option> 
-                             <option>Fournisseur name 5</option> 
-                         </select>
-                      </div>                      
-                    </div> 
-                    <div class="col-12">
-                      <div class="formselectbold formbold">
-                         <label for="name" class="formbold-form-label">Statut</label>
-                          <div class="d-flex StatutPopupaddnew">
-                            <div class="me-3 addpopupNouveau">
-                              <input type="radio" id="rdNouveau" name="radio-group" checked>
-                              <label for="rdNouveau">Nouveau</label>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <span *ngIf="formData.id==0">Nouveau tickets</span>
+                    <span *ngIf="formData.id!=0">Modifier tickets</span>
+
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="NewTiktcont">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="formbold">
+                                <label for="name" class="formbold-form-label">Réf. commande</label>
+                                <input type="text" #commande="ngModel" required [(ngModel)]="formData.commande"
+                                    class="formbold-form-input">
+                                <span class="text-danger" *ngIf="commande.touched && commande.errors?.['required']">Réf.
+                                    commande Required</span>
                             </div>
-                            <div class="me-3 addpopupEncours">
-                              <input type="radio" id="rdEncours" name="radio-group">
-                              <label for="rdEncours">Encours</label>
-                            </div>
-                            <div class="me-3 addpopupcloture">
-                              <input type="radio" id="rdcomplete" name="radio-group">
-                              <label for="rdcomplete">Clôturé</label>
-                            </div>
-                          </div>
-                      </div>                      
-                    </div> 
-                    <div class="col-12">
-                        <div class="button">
-                            <button data-bs-toggle="modal" data-bs-target="#userModal" class="formbold-btn" type="submit" *ngIf="formData.id==0" [disabled]="!commande.valid || !description.valid" (click)="onSaveTicket()">Créer un nouveau ticket</button>
                         </div>
-                        <div class="button">
-                            <button data-bs-toggle="modal" data-bs-target="#userModal" class="formbold-btn savechanges" type="submit" *ngIf="formData.id!=0" [disabled]="!commande.valid || !description.valid" (click)="updateTicket()">Sauvegarder les modifications</button> 
-                        </div>  
+
+
+                        <div class="col-12">
+                            <div class="formbold">
+                                <label for="name" class="formbold-form-label">Description</label>
+                                <textarea class="formbold-form-input" #description="ngModel" required
+                                    [(ngModel)]="formData.description"></textarea>
+                                <span class="text-danger"
+                                    *ngIf="description.touched && description.errors?.['required']">Réf. commande
+                                    Required</span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="formbold">
+                                <label for="name" class="formbold-form-label">Interlocteur assigné</label>
+                                <select class="formbold-form-input"  #user="ngModel" required
+                                [(ngModel)]="formData.user">
+                                    <option *ngFor="let user of userList" [value]="user.id">{{user.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="formbold">
+                                <label for="name" class="formbold-form-label">Fournisseur</label>
+                                <select class="formbold-form-input"  #sup="ngModel" required
+                                [(ngModel)]="formData.sup">
+                                    <option *ngFor="let sup of suplierList" [value]="sup.id">{{sup.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="formselectbold formbold">
+                                <label for="name" class="formbold-form-label">Statut</label>
+                                <div class="d-flex StatutPopupaddnew">
+                                    <div class="me-3 addpopupNouveau">
+                                        <input type="radio" id="rdNouveau" name="radio-group" value="Nouveau"
+                                        [(ngModel)]="formData.status">
+                                        <label for="rdNouveau">Nouveau</label>
+                                    </div>
+                                    <div class="me-3 addpopupEncours">
+                                        <input type="radio" id="rdEncours" name="radio-group" value="Encours"
+                                        [(ngModel)]="formData.status">
+                                        <label for="rdEncours">Encours</label>
+                                    </div>
+                                    <div class="me-3 addpopupcloture">
+                                        <input type="radio" id="rdcomplete" name="radio-group" value="Clôturé"
+                                        [(ngModel)]="formData.status">
+                                        <label for="rdcomplete">Clôturé</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="button">
+                                <button data-bs-toggle="modal" data-bs-target="#ModalNewTikt" class="formbold-btn"
+                                    type="submit" *ngIf="formData.id==0"
+                                    [disabled]="!commande.valid || !description.valid" (click)="onSaveTicket()">Créer un
+                                    nouveau ticket</button>
+                            </div>
+                            <div class="button">
+                                <button data-bs-toggle="modal" data-bs-target="#ModalNewTikt"
+                                    class="formbold-btn savechanges" type="submit" *ngIf="formData.id!=0"
+                                    [disabled]="!commande.valid || !description.valid"
+                                    (click)="updateTicket()">Sauvegarder les modifications</button>
+                            </div>
+                        </div>
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
