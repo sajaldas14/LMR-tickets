@@ -36,6 +36,25 @@ app.use(express.static(path.join(__dirname, 'uploads')));
 
 // app.use('/api', require('./routes/api'));
 
+app.use((req, res, next) => {
+  var user = req.headers['x-app-user'];
+
+  try {
+
+    if (user) {
+      user = decodeURIComponent(user);
+      let parsedUser = JSON.parse(user);
+      if (parsedUser)
+        req.user = parsedUser;
+    }
+
+  } catch (err) {
+
+  }
+
+  next()
+})
+
 const db = require('./db/lmrDb');
 
 db.connect(function (error) {
@@ -47,7 +66,7 @@ db.connect(function (error) {
 });
 
 app.get("/construction/LMR/API/api/ping", (req, res) => {
-  res.send({message:'pong'});
+  res.send({ message: 'pong' });
 });
 
 // Endpoint for user Admin login
@@ -294,9 +313,20 @@ app.delete("/construction/LMR/API/api/supplier/delete/:id", (req, res) => {
 });
 
 
+
 //view the Records User
 
 app.get("/construction/LMR/API/api/ticket", (req, res) => {
+
+  if (!req.user) {
+    res.json({
+      status: false,
+      data: []
+    });
+    return;
+  }
+
+
   var sql = `SELECT
   T.*,
   S.image AS s_image,
@@ -309,8 +339,9 @@ ON
   T.supplier = S.id
 LEFT JOIN USER AS U
 ON
-  T.assigned = U.id`;
-  db.query(sql, function (error, result) {
+  T.assigned = U.id
+  WHERE T.supplier = ? OR T.assigned = ?`;
+  db.query(sql, [req.user.result.id, req.user.result.id], function (error, result) {
     if (error) {
       console.log("Error Connecting to DB");
     } else {
@@ -372,11 +403,72 @@ app.get("/construction/LMR/API/api/ticket/:id", (req, res) => {
   db.query(sql, function (error, result) {
     if (error) {
       console.log("Error Connecting to DB");
+      res.send({ status: false, data: null });
     } else {
       res.send({ status: true, data: result });
     }
   });
 });
+
+
+
+app.get("/construction/LMR/API/api/messages/conversation/:id/:reciver", (req, res) => {
+  var queryString = "select * from message WHERE (reciver = ? OR sender = ?) AND (reciver = ? or sender = ?) ORDER by message_id ASC;";
+
+  const parameters = [
+    req.params.id,
+    req.params.id,
+    req.params.reciver,
+    req.params.reciver
+  ];
+
+  db.query(queryString, parameters, (error, result) => {
+    if (error) {
+      console.log("Error Connecting to DB");
+      res.send({ status: false, data: null });
+      return;
+    } else {
+      res.send({ status: false, data: result });
+    }
+  });
+
+});
+
+app.post("/construction/LMR/API/api/messages/send/:id", (req, res) => {
+  var userId = req.params.id;
+
+  // if (req.user) {
+  //   console.log("Unauthorized user");
+  // }
+  if (req.params.id == req.body.reciver) {
+    res.send({ status: false, message: "Error While sending message" });
+    return;
+  }
+
+
+  var insertSql = "INSERT INTO `message` (`sender`, `reciver`, `message_data`, `attachment`) VALUES (?, ?, ?, ?);";
+
+  db.query(insertSql, [
+    userId,
+    req.body.reciver,
+    req.body.message_data,
+    req.body.attachment ?? ""
+  ], (error, result) => {
+    if (error) {
+      console.log("Error Connecting to DB");
+      res.send({ status: false, data: null });
+    } else {
+      if (result.affectedRows === 1) {
+        res.send({ status: true, message: "Message send succesfully" });
+      }
+      else {
+        res.send({ status: false, message: "Error While sending message" });
+      }
+    }
+  });
+
+});
+
 
 //Delete the Records for Ticket
 
@@ -429,7 +521,7 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.json({
-    message:"error"
+    message: "error"
   })
 });
 

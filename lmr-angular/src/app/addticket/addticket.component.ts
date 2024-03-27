@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ApiserviceService } from '../service/apiservice.service';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ import { GlobalService } from '../service/global.service';
   templateUrl: './addticket.component.html',
   styleUrl: './addticket.component.css'
 })
-export class AddticketComponent {
+export class AddticketComponent implements OnInit {
 
   formData: any = {
     id: 0,
@@ -29,7 +29,7 @@ export class AddticketComponent {
   userList: any[] = [];
 
 
-  constructor(private API: ApiserviceService,private globalService:GlobalService, private route: Router) {
+  constructor(private API: ApiserviceService, private globalService: GlobalService, private route: Router) {
   }
 
   readTickets: any[] = [];
@@ -49,9 +49,16 @@ export class AddticketComponent {
   }
 
   ngOnInit(): void {
-    this.refreshList();
     this.API.getAllSuppliers().subscribe(d => { this.suplierList = d.data });
     this.API.getAllUsers().subscribe(d => { this.userList = d.data });
+    this.refreshList();
+  }
+
+
+
+  navigate(user: string, suplier: string) {
+    console.log(user, suplier);
+    this.route.navigate([`/ticket/message/${user}/${suplier}`]);
   }
 
   refreshList() {

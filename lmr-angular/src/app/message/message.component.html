@@ -9,6 +9,7 @@
                 </div>
                 <div class="chatbox_container">
                     <div class="chat_box">
+
                         <div class="message-box my-message">
                             <div class="profile_pic">
                                 <img src="assets/images/profile-pic.jpg" alt="">
@@ -20,6 +21,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="message-box friend-message">
                             <div class="profile_pic">
                                 <img src="assets/images/profile-pic.jpg" alt="">
@@ -27,8 +29,8 @@
                             <div class="txt">
                                 <div class="time">Il ya 3 jours</div>
                                 <div class="message">
-                                    <p>Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 
-1500, quand un imprimeur anonyme assembla ensemble des morceaux</p>
+                                    <p>Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années
+                                        1500, quand un imprimeur anonyme assembla ensemble des morceaux</p>
                                     <div class="pdf_upload">
                                         <a href="#">Buggy électrique.pdf</a>
                                         <a href="#">buggy-electrique-enfant.jpg</a>
@@ -36,51 +38,41 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="message-box my-message">
+
+
+                        <div *ngFor="let message of conversations"
+                            class="message-box {{message.sender==s?'my-message':'friend-message'}}">
+
                             <div class="profile_pic">
                                 <img src="assets/images/profile-pic.jpg" alt="">
                             </div>
+
                             <div class="txt">
                                 <div class="time">Il ya 3 jours</div>
                                 <div class="message">
-                                    <p>Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500</p>
+                                    <p>{{message.message_data}}</p>
+                                    <div class="pdf_upload" *ngIf="message.attachment">
+                                        <a href="#">{{message.attachment}}</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="message-box friend-message">
-                            <div class="profile_pic">
-                                <img src="assets/images/profile-pic.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="time">Il ya 3 jours</div>
-                                <div class="message">
-                                    <p>Le Lorem Ipsum est simplement du faux texte employé</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message-box my-message">
-                            <div class="profile_pic">
-                                <img src="assets/images/profile-pic.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="time">Il ya 3 jours</div>
-                                <div class="message">
-                                    <p>Le Lorem Ipsum est le faux texte standard</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="bottom_sec">
                         <div class="box">
                             <div class="file-loading">
-                               <input id="multiplefileupload" type="file" accept=".jpg,.gif,.png" multiple>
+                                <input id="multiplefileupload" type="file" accept=".jpg,.gif,.png"
+                                    (change)="userfileChanged($event)">
                             </div>
                             <div class="type_message">
-                                <input type="text" class="form-control" id="Keywords" placeholder="Tapez un message ici" >
+                                <input type="text" class="form-control" id="Keywords" #messagetext="ngModel" required
+                                    [(ngModel)]="formData.messagetext" placeholder="Tapez un message ici">
                             </div>
                         </div>
                         <div class="submit_btn">
-                            <button type="submit" id="form-submit"><img src="assets/images/paper-plane.svg" alt=""></button>
+                            <button type="submit" id="form-submit" (click)="onSaveMessage()"><img
+                                    src="assets/images/paper-plane.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -88,58 +80,89 @@
             <div class="right_sec">
                 <div class="about_ticketbox">
                     <div class="button">
-                        <a href="javascript:void(0);"  onclick="myFunction()"><img src="assets/images/download_file.svg" alt="">Voir tous les fichiers échangés</a>
-                    </div> 
+                        <a href="javascript:void(0);" onclick="myFunction()"><img src="assets/images/download_file.svg"
+                                alt="">Voir tous les fichiers échangés</a>
+                    </div>
                     <div class="box">
-                        <div class="heading"><h5>Réf. Commande:</h5></div>
-                        <div class="details"><h6>LKODOND</h6></div>
+                        <div class="heading">
+                            <h5>Réf. Commande:</h5>
+                        </div>
+                        <div class="details">
+                            <h6>LKODOND</h6>
+                        </div>
                     </div>
-                    <div class="box">                                       
-                        <div class="heading"><h5>Description:</h5></div>
-                        <div class="details"><h6>Validation côté serveur</h6></div>
+                    <div class="box">
+                        <div class="heading">
+                            <h5>Description:</h5>
+                        </div>
+                        <div class="details">
+                            <h6>Validation côté serveur</h6>
+                        </div>
                     </div>
-                    <div class="box">                                          
-                        <div class="heading"><h5>Date du ticket:</h5></div>
-                        <div class="details"><h6>05-06-2023</h6></div>
+                    <div class="box">
+                        <div class="heading">
+                            <h5>Date du ticket:</h5>
+                        </div>
+                        <div class="details">
+                            <h6>05-06-2023</h6>
+                        </div>
                     </div>
-                    <div class="box">                                          
-                        <div class="heading"><h5>Date de clôture:</h5></div>
-                        <div class="details"><h6>15-08-2023</h6></div>
+                    <div class="box">
+                        <div class="heading">
+                            <h5>Date de clôture:</h5>
+                        </div>
+                        <div class="details">
+                            <h6>15-08-2023</h6>
+                        </div>
                     </div>
-                    <div class="box">                                          
-                        <div class="heading"><h5>Fournisseur:</h5></div>
-                        <div class="details"><h6><img src="assets/images/table_pic1.png" alt=""></h6></div>
+                    <div class="box">
+                        <div class="heading">
+                            <h5>Fournisseur:</h5>
+                        </div>
+                        <div class="details">
+                            <h6><img src="assets/images/table_pic1.png" alt=""></h6>
+                        </div>
                     </div>
-                    <div class="box">                                          
-                        <div class="heading"><h5>Interlocteur assigné</h5></div>
-                        <div class="details"><h6><img class="profile_pic" src="assets/images/beltane.png" alt=""><span>Beltane Chesnay</span></h6></div>
+                    <div class="box">
+                        <div class="heading">
+                            <h5>Interlocteur assigné</h5>
+                        </div>
+                        <div class="details">
+                            <h6><img class="profile_pic" src="assets/images/beltane.png" alt=""><span>Beltane
+                                    Chesnay</span></h6>
+                        </div>
                     </div>
-                    <div class="box">                                          
-                        <div class="heading"><h5>Statut:</h5></div>
-                        <div class="details"><h6><button class="new">Nouveau</button></h6></div>
+                    <div class="box">
+                        <div class="heading">
+                            <h5>Statut:</h5>
+                        </div>
+                        <div class="details">
+                            <h6><button class="new">Nouveau</button></h6>
+                        </div>
                     </div>
-                    
-                    
+
+
                     <div class="all_mediabox Lesfichiersbody" id="Lesfichiers">
-                    <div class="heading">
-                        <h3>Les fichiers échangés</h3>
-<!--                        <button class="btn btn-close-icon"><img src="assets/images/close-icon.svg" alt=""></button>-->
-                        <button type="button" class="close btn btn-close-icon" aria-label="Close"  onclick="myFunctionclose()">
-                        		<span aria-hidden="true">&times;</span>
-                        	</button>
-                    </div> 
-                    <ul>
-                        <li><a href="#">Buggy électrique.pdf</a></li>
-                        <li><a href="#">buggy-electrique-enfant.jpg</a></li>
-                        <li><a href="#">buggy-electrique-enfant.jpg</a></li>
-                        <li><a href="#">Buggy électrique.pdf</a></li>
-                        <li><a href="#">buggy-electrique-enfant.jpg</a></li>
-                        <li><a href="#">buggy-electrique-enfant.jpg</a></li>
-                        <li><a href="#">Buggy électrique video.mp4</a></li>
-                    </ul>
-                </div>
-                    
-                    
+                        <div class="heading">
+                            <h3>Les fichiers échangés</h3>
+                            <!--                        <button class="btn btn-close-icon"><img src="assets/images/close-icon.svg" alt=""></button>-->
+                            <button type="button" class="close btn btn-close-icon" aria-label="Close"
+                                onclick="myFunctionclose()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <ul>
+                            <li><a href="#">Buggy électrique.pdf</a></li>
+                            <li><a href="#">buggy-electrique-enfant.jpg</a></li>
+                            <li><a href="#">buggy-electrique-enfant.jpg</a></li>
+                            <li><a href="#">Buggy électrique.pdf</a></li>
+                            <li><a href="#">buggy-electrique-enfant.jpg</a></li>
+                            <li><a href="#">buggy-electrique-enfant.jpg</a></li>
+                            <li><a href="#">Buggy électrique video.mp4</a></li>
+                        </ul>
+                    </div>
+
+
                 </div>
             </div>
         </div>

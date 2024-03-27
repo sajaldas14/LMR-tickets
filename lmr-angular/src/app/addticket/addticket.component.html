@@ -45,7 +45,7 @@
                                 </td>
                                 <td><button [ngClass]="{'btn-primary': suppliers.status==='Nouveau', 'btn-success': suppliers.status==='Encours', 'btn-danger': suppliers.status==='Clôturé'}">{{suppliers.status}}</button></td>
                                 <td>
-                                    <button class="btn btn-link btn-chat"><img
+                                    <button class="btn btn-link btn-chat" (click)="navigate(suppliers.assigned,suppliers.supplier)"><img
                                             src="assets/images/chatbubble-ellipses-outline.svg"></button>
                                     <button class="btn btn-link btn-edit" data-bs-toggle="modal"
                                         data-bs-target="#ModalNewTikt" (click)="editTicket(suppliers)"><img

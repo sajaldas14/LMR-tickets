@@ -27,7 +27,7 @@ export const routes: Routes = [
             { path: 'useradmin', title: 'User Admin', component: UserAdminComponent },
             { path: 'dashboard', title: 'Dashboard', component: DashboardComponent },
             { path: 'user', title: 'User', component: UserComponent },
-            { path: 'message', title: 'Message', component: MessageComponent },        
+            { path: 'message/:s/:r', title: 'Message', component: MessageComponent },        
             { path: '', redirectTo:'dashboard', pathMatch:'full' }
             
         ]
