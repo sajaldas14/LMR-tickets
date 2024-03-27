@@ -440,7 +440,7 @@ app.post("/construction/LMR/API/api/messages/send/:id", (req, res) => {
   // if (req.user) {
   //   console.log("Unauthorized user");
   // }
-  if (req.params.id == req.body.reciver) {
+  if (req.params.id == req.body.reciver || (req.body.message_data === "" && req.body.attachment === "")) {
     res.send({ status: false, message: "Error While sending message" });
     return;
   }
